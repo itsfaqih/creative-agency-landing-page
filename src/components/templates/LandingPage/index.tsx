@@ -9,26 +9,34 @@ import React from 'react';
 export default function LandingPage() {
   return (
     <main className="bg-primary">
-      <div className="grid grid-cols-2 px-24">
-        <div className="col-span-1 pr-48">
-          <Header />
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-2">
+          <div className="col-span-1 pr-48">
+            <Header />
+          </div>
+          <div className="col-span-1">
+            <Feature />
+          </div>
         </div>
-        <div className="col-span-1">
-          <Feature />
-        </div>
-      </div>
-      <div className="grid grid-cols-4 px-24">
-        <div className="flex items-center col-span-3 mt-16">
-          <Info />
-        </div>
-        <div className="relative col-span-1 -mr-24">
-          <Icons.Intersect className="absolute z-10 text-secondary" style={{top: '-1.2rem', left: '-1.5rem'}} />
-          <NumericFeature
-            number={42388}
-            description="Our total submission succesor record"
-            variant={NUMERIC_FEATURE_TYPE.BIG}
-            className="relative z-20 pt-16 pb-12 pl-20 pr-16"
-          />
+        <div className="grid grid-cols-4">
+          <div className="flex items-center col-span-3 mt-16">
+            <Info />
+          </div>
+          <div
+            className="relative col-span-1"
+            style={{ marginRight: 'calc((100vw - 72rem) / 2 * -1)' }}
+          >
+            <Icons.Intersect
+              className="absolute z-10 text-secondary"
+              style={{ top: '-1.2rem', left: '-1.5rem' }}
+            />
+            <NumericFeature
+              number={42388}
+              description="Our total submission succesor record"
+              variant={NUMERIC_FEATURE_TYPE.BIG}
+              className="relative z-20 pt-16 pb-12 pl-20 pr-16"
+            />
+          </div>
         </div>
       </div>
     </main>

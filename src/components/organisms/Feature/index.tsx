@@ -45,7 +45,7 @@ export default function Feature() {
           </svg>
         </div>
         <div className="pl-12">
-          <div className="relative z-20 w-full h-56">
+          <div className="relative z-20 w-full">
             <img src={img_2} alt="Lego" className="object-cover w-full h-full" />
             <svg
               width="25"
