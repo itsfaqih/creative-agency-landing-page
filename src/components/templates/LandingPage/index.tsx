@@ -35,6 +35,7 @@ export default function LandingPage() {
               description="Our total submission succesor record"
               variant={NUMERIC_FEATURE_TYPE.BIG}
               className="relative z-20 pt-16 pb-12 pl-20 pr-16"
+              style={{paddingRight: 'calc((100vw - 72rem) / 2)'}}
             />
           </div>
         </div>

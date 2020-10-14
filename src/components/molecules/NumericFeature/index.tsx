@@ -1,18 +1,17 @@
 import NumericFeatureDesc from 'components/atoms/NumericFeatureDesc';
 import NumericFeatureHeading from 'components/atoms/NumericFeatureHeading';
 import { NUMERIC_FEATURE_TYPE } from 'components/types/numeric_feature';
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import Icons from 'components/atoms/Icons';
 
-interface Props {
+interface Props extends HTMLAttributes<HTMLDivElement>{
   number: number;
   description: string;
   variant: NUMERIC_FEATURE_TYPE;
-  className?: string;
 }
 
-export default function NumericFeature({ number, description, variant, className }: Props) {
+export default function NumericFeature({ number, description, variant, className, ...props }: Props) {
   const classes = classNames(
     'flex flex-col items-center justify-center bg-light-orange',
     className
@@ -28,7 +27,7 @@ export default function NumericFeature({ number, description, variant, className
   });
 
   return (
-    <div className={classes}>
+    <div className={classes} {...props}>
       <div>
         <div className={valueClass}>
           <Icons.Symbolic className={iconClass} />
