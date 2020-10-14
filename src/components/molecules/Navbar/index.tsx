@@ -2,6 +2,7 @@ import React, { OlHTMLAttributes, ReactNode } from 'react';
 import classNames from 'classnames';
 import NavbarLink from 'components/atoms/NavbarLink';
 import Brand from 'components/atoms/Brand';
+import { motion } from 'framer-motion';
 
 export type navbarMenuItem = {
   label: ReactNode;
@@ -19,14 +20,14 @@ export default function Navbar({ brandUrl = '', menuItems = [], className, ...pr
   return (
     <nav className="pt-10 pb-16">
       <ul {...props} className={classes}>
-        <li>
-          <Brand href={brandUrl} />
+        <li className="overflow-y-hidden">
+          <motion.div initial={{ y: '-2rem' }} animate={{ y: 0 }} transition={{ duration: 0.8 }}>
+            <Brand href={brandUrl} />
+          </motion.div>
         </li>
         {menuItems.map((item, index) => (
           <li key={index}>
-            <NavbarLink href={item.url}>
-              {item.label}
-            </NavbarLink>
+            <NavbarLink href={item.url}>{item.label}</NavbarLink>
           </li>
         ))}
       </ul>

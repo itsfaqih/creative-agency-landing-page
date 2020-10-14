@@ -6,16 +6,19 @@ import React from 'react';
 import img_1 from 'assets/img/img-1.jpg';
 import img_2 from 'assets/img/img-2.jpg';
 import Icons from 'components/atoms/Icons';
+import { motion } from 'framer-motion';
 
 export default function Feature() {
   return (
     <section>
       <div className="grid grid-cols-2">
         <div className="relative h-full">
+        <motion.div initial={{ y: '-262px' }} animate={{ y: 0 }} transition={{ duration: 0.8 }}>
           <Icons.Bullets
             className="absolute z-10 text-white opacity-50"
             style={{ top: '-0.5rem', left: '-2.7rem' }}
           />
+          </motion.div>
           <NumericFeature
             number={463}
             description="Request Per Second"
