@@ -11,7 +11,7 @@ export default function LandingPage() {
     <main className="bg-primary">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-2">
-          <div className="col-span-1 pr-48">
+          <div className="col-span-1 pr-40">
             <Header />
           </div>
           <div className="col-span-1">
@@ -23,8 +23,7 @@ export default function LandingPage() {
             <Info />
           </div>
           <div
-            className="relative col-span-1"
-            style={{ marginRight: 'calc((100vw - 72rem) / 2 * -1)' }}
+            className="relative col-span-1 xl:mr-overflow 2xl:-mr-32"
           >
             <Icons.Intersect
               className="absolute z-10 text-secondary"
@@ -34,8 +33,7 @@ export default function LandingPage() {
               number={42388}
               description="Our total submission succesor record"
               variant={NUMERIC_FEATURE_TYPE.BIG}
-              className="relative z-20 pt-16 pb-12 pl-20 pr-16"
-              style={{paddingRight: 'calc((100vw - 72rem) / 2)'}}
+              className="relative z-20 pt-16 pb-12 pl-20 xl:pr-overflow 2xl:pr-32"
             />
           </div>
         </div>
