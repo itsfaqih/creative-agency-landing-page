@@ -24,7 +24,7 @@ export default function Feature() {
           />
         </div>
         <div className="flex items-center justify-end pr-12">
-          <AuthButton href="#"/>
+          <AuthButton href="#" />
         </div>
         <div className="flex items-end">
           <div className="h-1/2">
@@ -38,7 +38,8 @@ export default function Feature() {
             height="44"
             fill="currentColor"
             className="absolute text-yellow"
-            style={{ top: '-10', right: '-19' }}
+            style={{ top: '-10px', right: '-19px' }}
+            xmlns="http://www.w3.org/2000/svg"
           >
             <rect width="44" height="19" />
             <rect x="25" width="19" height="44" />
@@ -52,7 +53,8 @@ export default function Feature() {
               height="45"
               fill="currentColor"
               className="absolute text-yellow"
-              style={{ top: '-17', left: '-11' }}
+              style={{ top: '-17px', left: '-11px' }}
+              xmlns="http://www.w3.org/2000/svg"
             >
               <rect width="25" height="20" />
               <rect width="12" height="45" />
