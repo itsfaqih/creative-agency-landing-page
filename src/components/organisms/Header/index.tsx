@@ -27,7 +27,7 @@ export default function Header() {
               initial="hidden"
               animate="visible"
               variants={headingItemsVariants}
-              transition={{ delay: 0.3, duration: 0.6 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
             >
               wooden
             </motion.p>
@@ -35,7 +35,7 @@ export default function Header() {
               initial="hidden"
               animate="visible"
               variants={headingItemsVariants}
-              transition={{ delay: 0.6, duration: 0.6 }}
+              transition={{ delay: 0.35, duration: 0.6 }}
             >
               community
             </motion.p>
@@ -43,7 +43,7 @@ export default function Header() {
               initial="hidden"
               animate="visible"
               variants={headingItemsVariants}
-              transition={{ delay: 0.9, duration: 0.6 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
             >
               in London.
             </motion.p>

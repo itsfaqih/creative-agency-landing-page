@@ -35,22 +35,35 @@ export default function Hero({ heading, description, callToActionLabel, classNam
       <HeroHeading className="mb-6">{heading}</HeroHeading>
       <div className="overflow-hidden">
         <motion.div initial={{ y: '-4rem' }} animate={{ y: 0 }} transition={{ duration: 0.4 }}>
-          <ButtonLink href="#">
-            {callToActionLabel}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="w-10 ml-10 text-secondary"
+          <ButtonLink href="#" className="relative">
+            <motion.div
+              initial={{ x: '-100%' }}
+              animate={{ x: 0 }}
+              transition={{ duration: 0.5, delay: 1.5 }}
+              className="absolute left-0 z-10 w-full h-full bg-secondary"
+            ></motion.div>
+            <motion.div
+              initial={{ color: '#f39a8b' }}
+              animate={{ color: '#fff' }}
+              transition={{ duration: 0.5, delay: 1.6 }}
+              className="relative z-20 flex items-center"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
+              {callToActionLabel}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-10 ml-10"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </motion.div>
           </ButtonLink>
         </motion.div>
       </div>
